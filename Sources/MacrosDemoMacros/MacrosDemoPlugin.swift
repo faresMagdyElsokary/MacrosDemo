@@ -5,6 +5,7 @@ import SwiftSyntaxMacros
 struct MacrosDemoPlugin: CompilerPlugin {
     let providingMacros: [Macro.Type] = [
         DoubleValueMacro.self,
-        StructGeneratorMacro.self
+        StructGeneratorMacro.self,
+        SingletonMacro.self
     ]
 }

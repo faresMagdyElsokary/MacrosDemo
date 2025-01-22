@@ -1,15 +1,11 @@
-/// This macro converts an integer literal to a Double value.
+/// A macro to generate a Swift struct with specified properties.
 ///
-/// Usage:
+/// This macro validates input arguments, ensures the struct name starts with an uppercase letter,
+/// and dynamically creates the struct and its properties.
 ///
-/// ```swift
-/// let myDouble = #doubleValue(10)
-/// ```
-///
-/// This macro will expand to:
-///
-/// ```swift
-/// let myDouble = Double(10)
-/// ```
+/// - Parameters:
+///   - node: The macro expansion syntax containing the struct name and fields.
+///   - context: The macro expansion context.
+
 @freestanding(declaration)
 public macro generateStruct(_ name: String, fields: [String: String]) = #externalMacro(module: "MacrosDemoMacros", type: "StructGeneratorMacro")

@@ -3,11 +3,10 @@ import MacrosDemo
 
 let ffg = #doubleValue(3)
 
-// MARK: - sss
+//#generateStruct("UserModel", fields: ["x": "Int"])
 
-#generateStruct(
-    "UserModels",
-    fields: [
-        "name": "String"
-    ]
-)
+
+@Singleton
+class Single {
+    let x = 1
+}
